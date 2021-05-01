@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+premiertest,service,CalculatorServiceImpl,35,55,3,2,7,14,3,3,0,2
+premiertest,service,SolutionFormatterImpl,14,0,0,0,2,0,2,0,2,0
+premiertest,premiertest,Calculator,54,11,6,0,16,3,11,3,8,3
+premiertest,model,Calculation,24,0,0,0,10,0,7,0,7,0
+premiertest,model,CalculationModel,55,37,0,0,17,14,5,8,5,8
+premiertest,model,CalculationType,23,54,6,0,7,6,6,1,1,1

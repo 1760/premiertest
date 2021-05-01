@@ -1,0 +1,9 @@
+model/CalculationType.class
+service/CalculatorServiceImpl.class
+service/SolutionFormatter.class
+service/CalculatorServiceImpl$1.class
+model/CalculationModel.class
+model/Calculation.class
+service/SolutionFormatterImpl.class
+premiertest/Calculator.class
+service/CalculatorService.class

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="de"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculationModel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">premiertest</a> &gt; <a href="index.source.html" class="el_package">model</a> &gt; <span class="el_source">CalculationModel.java</span></div><h1>CalculationModel.java</h1><pre class="source lang-java linenums">package model;
+
+public class CalculationModel {
+	private static final String SEPARATOR = &quot; &quot;;
+	private Integer leftArgument;
+	private Integer rightArgument;
+	private CalculationType type;
+	private Integer solution;
+	private String formattedSolution;
+
+<span class="fc" id="L11">	public CalculationModel(CalculationType calculationType, int leftArgument, int rightArgument) {</span>
+<span class="fc" id="L12">		type = calculationType;</span>
+<span class="fc" id="L13">		this.leftArgument = leftArgument;</span>
+<span class="fc" id="L14">		this.rightArgument = rightArgument;</span>
+<span class="fc" id="L15">	}</span>
+
+	/**
+	 * Convenience Constructor used in test
+	 */
+<span class="nc" id="L20">	public CalculationModel(CalculationType calculationType, int leftArgument, int rightArgument, Integer solution) {</span>
+<span class="nc" id="L21">		type = calculationType;</span>
+<span class="nc" id="L22">		this.leftArgument = leftArgument;</span>
+<span class="nc" id="L23">		this.rightArgument = rightArgument;</span>
+<span class="nc" id="L24">		this.solution = solution;</span>
+<span class="nc" id="L25">	}</span>
+
+	/**
+	 * Builds a Calculation from a string such as 2 + 2
+	 *
+	 * @param calculation in written form
+	 * @return model representing the calculatoin
+	 */
+	public static CalculationModel fromText(String calculation) {
+<span class="nc" id="L34">		final String[] parts = calculation.split(SEPARATOR);</span>
+<span class="nc" id="L35">		final int leftArgument = Integer.parseInt(parts[0]);</span>
+<span class="nc" id="L36">		final int rightArgument = Integer.parseInt(parts[2]);</span>
+<span class="nc" id="L37">		final CalculationType calculationType = CalculationType.fromSymbol(parts[1]);</span>
+
+<span class="nc" id="L39">		return new CalculationModel(calculationType, leftArgument, rightArgument);</span>
+	}
+
+	public Integer getLeftArgument() {
+<span class="fc" id="L43">		return leftArgument;</span>
+	}
+
+	public void setLeftArgument(Integer leftArgument) {
+<span class="nc" id="L47">		this.leftArgument = leftArgument;</span>
+<span class="nc" id="L48">	}</span>
+
+	public Integer getRightArgument() {
+<span class="fc" id="L51">		return rightArgument;</span>
+	}
+
+	public void setRightArgument(Integer rightArgument) {
+<span class="nc" id="L55">		this.rightArgument = rightArgument;</span>
+<span class="nc" id="L56">	}</span>
+
+	public CalculationType getType() {
+<span class="fc" id="L59">		return type;</span>
+	}
+
+	public void setType(CalculationType type) {
+<span class="nc" id="L63">		this.type = type;</span>
+<span class="nc" id="L64">	}</span>
+
+	public Integer getSolution() {
+<span class="fc" id="L67">		return solution;</span>
+	}
+
+	public void setSolution(Integer solution) {
+<span class="fc" id="L71">		this.solution = solution;</span>
+<span class="fc" id="L72">	}</span>
+
+	public String getFormattedSolution() {
+<span class="fc" id="L75">		return formattedSolution;</span>
+	}
+
+	public void setFormattedSolution(String formattedSolution) {
+<span class="fc" id="L79">		this.formattedSolution = formattedSolution;</span>
+<span class="fc" id="L80">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
